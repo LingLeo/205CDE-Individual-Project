@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+    <form action = "/bookupdaterec2" method = "POST">
+    <h2>Update Query</h2>
+    <body>
+        <table border = 1>
+            <thead>
+                <td></td>
+                <td>Book Key</td>
+                <td>Book Name</td>
+                <td>Book Author</td>
+            </thead>
+			
+            {% for row in result %}
+                <tr>
+                    <td><input type = "radio" value = "{{row[0]}}" name = "In_Book_Key"></td>
+                    <td><input type = "text" name = "Book_Key" id="Book_Key" value="{{row[0]}}" readonly /></td>
+                    <td><input type = "text" name = "Book_Name" id="Book_Name" value="{{row[1]}}" readonly /></td>
+                    <td><input type = "text" name = "Book_Author" id="Book_Author" value="{{row[2]}}" readonly /></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <input type = "submit" value = "Edit" name = "submit">
+        <a href = "/">Go back to home page</a>
+    </body>
+</html>
+
+

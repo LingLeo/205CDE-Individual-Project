@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+    <form action = "/readerupdaterec2" method = "POST">
+    <h2>Update Query</h2>
+    <body>
+        <table border = 1>
+            <thead>
+                <td></td>
+                <td>Reader Key</td>
+                <td>Reader Name</td>
+                <td>Reader Phone no</td>
+            </thead>
+			
+            {% for row in result %}
+                <tr>
+                    <td><input type = "radio" value = "{{row[0]}}" name = "In_Reader_Key"></td>
+                    <td><input type = "text" name = "Reader_Key" id="Reader_Key" value="{{row[0]}}" readonly /></td>
+                    <td><input type = "text" name = "Reader_Name" id="Reader_Name" value="{{row[1]}}" readonly /></td>
+                    <td><input type = "text" name = "Reader_Phone_no" id="Reader_Phone_no" value="{{row[2]}}" readonly /></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <input type = "submit" value = "Edit" name = "submit">
+        <a href = "/">Go back to home page</a>
+    </body>
+</html>
+
+

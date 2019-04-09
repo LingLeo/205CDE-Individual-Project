@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+	<h2>Add Officer Information</h2>
+ 	    <body>
+		    <br>result of addition : {{ msg }}</br>		
+            {% for row in result %}
+			Officer Key<br>
+			<input type = "text" name = "Officer_Key" id="Officer_Key" value="{{row[0]}}" readonly /></br>
+			
+			Officer Name<br>
+			<input type = "text" name = "Officer_Name" id="Officer_Name" value="{{row[1]}}" readonly /></br>
+
+			Officer Login_Key<br>
+			<input type = "text" name = "Officer_Login_Key" id="Officer_Login_Key" value="{{row[2]}}" readonly /></br>
+			
+			Officer Password<br>
+			<input type = "text" name = "Officer_Password" id="Officer_Password" value="{{row[3]}}" readonly /></br>
+			
+            {% endfor %}
+            <a href = "/">Go back to home page</a>
+	    </body>
+</html>
+
+
